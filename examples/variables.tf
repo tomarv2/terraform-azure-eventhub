@@ -7,5 +7,5 @@ variable "teamid" {
 variable "prjid" {
   description = "Name of the project/stack e.g: mystack, nifieks, demoaci. Should not be changed after running 'tf apply'"
   type        = string
-  default     = "resource_group"
+  default     = "project"
 }

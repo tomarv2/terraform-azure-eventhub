@@ -9,7 +9,7 @@ variable "prjid" {
 }
 
 variable "eventhub_namespaces_config" {
-  description = "Resource group configuration"
+  description = "Eventhub namespace configuration"
   type        = map(any)
 }
 
@@ -35,11 +35,3 @@ variable "hubs" {
   }))
   default = []
 }
-
-#variable "capture_description" {
-#  description = "Capture the streaming data in Event Hubs in an Azure Blob storage or Azure Data Lake Storage."
-#  type = object({
-#    variables = map(string)
-#  })
-#  default = null
-#}
