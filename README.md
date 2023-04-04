@@ -77,11 +77,16 @@ Please refer to examples directory [link](examples) for references.
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0.1 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.21.1 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.21.1 |
 
 ## Modules
 
@@ -89,13 +94,25 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [azurerm_eventhub.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/eventhub) | resource |
+| [azurerm_eventhub_namespace.this](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/eventhub_namespace) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_config"></a> [config](#input\_config) | Eventhub namespace configuration | `map(any)` | n/a | yes |
+| <a name="input_extra_tags"></a> [extra\_tags](#input\_extra\_tags) | Additional tags to associate | `map(string)` | `{}` | no |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_hub_ids"></a> [hub\_ids](#output\_hub\_ids) | Identity of Event Hubs. |
+| <a name="output_hub_partition_ids"></a> [hub\_partition\_ids](#output\_hub\_partition\_ids) | Partition id of Event Hubs. |
+| <a name="output_identity"></a> [identity](#output\_identity) | Identity of Event Hub Namespace. |
+| <a name="output_namespace_ids"></a> [namespace\_ids](#output\_namespace\_ids) | Id of Event Hub Namespace. |
+| <a name="output_namespace_names"></a> [namespace\_names](#output\_namespace\_names) | Name of Event Hub Namespace. |
 <!-- END_TF_DOCS -->
