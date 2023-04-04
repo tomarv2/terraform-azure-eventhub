@@ -14,7 +14,7 @@ provider "azurerm" {
 module "eventhub" {
   source = "../"
 
-  eventhub_namespaces_config = {
+  config = {
     "varundemo1namespace1" = {
       location            = "westus2"
       resource_group_name = "<resource_group_name>"
@@ -46,8 +46,4 @@ module "eventhub" {
       }
     }
   }
-  # ---------------------------------------------
-  # Note: Do not change teamid and prjid once set.
-  teamid = var.teamid
-  prjid  = var.prjid
 }
