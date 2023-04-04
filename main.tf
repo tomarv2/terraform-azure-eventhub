@@ -1,6 +1,6 @@
 locals {
   hubs = flatten([
-    for namespace, config in var.eventhub_namespaces_config : [
+    for namespace, config in var.config : [
       for hub, settings in config.hubs : {
         namespace_name      = namespace
         resource_group_name = config.resource_group_name
@@ -13,7 +13,7 @@ locals {
 }
 
 resource "azurerm_eventhub_namespace" "this" {
-  for_each = var.eventhub_namespaces_config != null ? var.eventhub_namespaces_config : {}
+  for_each = var.config
 
   name                          = each.key
   location                      = each.value.location
